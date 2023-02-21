@@ -9,7 +9,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 classifiers = ["License :: OSI Approved :: MIT License"]
 dynamic = ["version", "description"]
-dependencies = ["python >= 3.10", "numpy", "xarray", "pydantic>=3.9", "scikit-image", "matplotlib"]
+dependencies = ["numpy", "xarray", "pydantic>=3.9", "scikit-image", "matplotlib"]
 
 [project.urls]
 Home = "https://github.com/Jhko725/jhelabtoolkit"
