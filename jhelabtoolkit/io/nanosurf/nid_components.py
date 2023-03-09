@@ -91,8 +91,7 @@ class Channel:
     def _scale_data(self, raw_data: np.ndarray) -> np.ndarray:
         dtype_info = np.iinfo(self.header.data_dtype)
         data_max, data_min = dtype_info.max, dtype_info.min
-        normalized_data = (raw_data - data_min) / (data_max - data_min)
-        print(normalized_data)
+        normalized_data = (np.float32(raw_data) - data_min) / (data_max - data_min)
         return normalized_data * self.header.data_range + self.header.data_min
 
     def to_dataarray(self) -> xr.DataArray:
